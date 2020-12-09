@@ -142,9 +142,11 @@ while(True):
             if option.upper() == 'S':
                 break
             elif option == '0':
+                counter = counter + 1
                 new_category = input('Enter category name: ')
-                category_list.append(new_category)
-                product_category.append(new_category)
+                category_list.append(Category(new_category))
+                category = category_list[counter].get_name()
+                product_category.append(category)
             else:
                 cat_num = int(option) - 1
                 category = category_list[cat_num].get_name()
